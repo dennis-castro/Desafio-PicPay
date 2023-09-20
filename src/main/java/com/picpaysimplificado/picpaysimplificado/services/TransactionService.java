@@ -50,8 +50,8 @@ public class TransactionService {
 
 
         this.repository.save(newTransaction);
-        userService.saveUser(sender);
-        userService.saveUser(receiver);
+        this.userService.saveUser(sender);
+        this.userService.saveUser(receiver);
     }
 
     public boolean authorizeTransaction(User sender, BigDecimal value) {
